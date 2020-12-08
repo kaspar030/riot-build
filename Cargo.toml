@@ -1,0 +1,23 @@
+[package]
+name = "riot-build"
+version = "0.1.0"
+authors = ["Kaspar Schleiser <kaspar@schleiser.de>"]
+edition = "2018"
+links = "riot-build"
+license = "LGPLv2.1"
+
+[dependencies]
+cfg-if = "1.0.0"
+linkme = "0.2.3"
+
+riot-rs-rt = "0.1.0"
+riot-rs-core = { optional = true, version = "0.1.0" }
+
+# currently riot-build provides startup code,
+# which in turn currently needs to pull in boards stuff
+# because of a bug in rustc. see src/lib.rs for more info.
+riot-rs-boards = "0.1.0"
+
+[features]
+riot-os-core = [ "riot-rs-core" ]
+riot-app = []
