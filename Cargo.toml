@@ -9,9 +9,8 @@ license = "LGPLv2.1"
 [dependencies]
 cfg-if = "1.0.0"
 
-riot-rs-rt = "0.1.0"
-riot-rs-core = { optional = true, version = "0.1.0" }
+riot-rs-rt = { version = "0.1.0", git = "https://github.com/future-proof-iot/RIOT-rs", branch = "main" }
+riot-rs-core = { optional = true, version = "0.1.0", git = "https://github.com/future-proof-iot/RIOT-rs", branch = "main" }
 
 [features]
-riot-os-core = [ "riot-rs-core" ]
 riot-app = []
